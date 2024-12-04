@@ -1,41 +1,57 @@
-// console.log("Hello");
+// console.log("Hello Ji!")
 
-// var a=12;
+// const a = 12;
 // if(a>10){
-//    let b=20;
-//    a=40;
-//    console.log("a inside:"+a);
+//     let a=20;
+//     a=40;
+//     console.log(" a inside:" +a);
 // }
-// console.log("a outside:"+a);
-console.log("Hi, inside index.js")
-function fun(a,b){
-    console.log("Hiiii");
-    return a+b;
-}
-const result = fun(23,12);
-console.log(result);
-function cCompiler()
-{
-    return "C Compiler";
-}
+// console.log("a outside:" +b);
 
-function javaCompiler(){
-    return "Java Compiler";
-}
+// console.log("hello!");
 
-function selectLanguage(language){
-    let data;
-    if(language=='c'){
-    function cCompiler()
-}
-if(language=="java"){
-    function javaCompiler(){
-     return "Java Compiler";
+// function fun(a,b){
+// console.log("Hiiiiii!")
+//     return a+b;
+
+// }
+//  const result = fun(23,12);
+//  console.log(result);
+
+const button = document.getElementById("btn");
+const output = document.getElementById("output");
+console.dir(button);
+
+function selectLanaguage(language) {
+  console.log("hi selsect lanagsuge");
+  output.innerHTML = "<h2>welcome to home page</h2>";
+  let data;
+  if (language == "c") {
+    function cCompiler() {
+      return "C compiler";
     }
-data=javaCompiler();
-}
-   return data;
-return "Hi, you have selected: "+clbk();
-}
 
-console.log(selectLanguage(javaCompiler));
+    data = cCompiler;
+  }
+  if (language == "java") {
+    function javaCompiler() {
+      return "java compiler";
+    }
+    data = javaCompiler;
+  }
+  return data;
+}
+// function selectLanaguage(clbk){
+
+// return "Hi you have selsected: "+clbk();
+
+// }
+//console.log(selectLanaguage(cCompiler));
+
+// console.log(selectLanaguage("java"));
+
+button.addEventListener("click", () => {
+  const comp = selectLanaguage("java");
+  output.innerHTML = `<h2 style="color:cyan">${comp}</h2>`;
+  console.log(comp);
+});
